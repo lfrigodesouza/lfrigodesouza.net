@@ -84,7 +84,7 @@ export default function NavBar() {
     <Bar>
       <BarContent>
         <Brand>
-          <Photo src="https://lfrigodesouza.net/uploads/avatar.jpg" />
+          <Photo src="https://blog.lfrigodesouza.net/uploads/avatar.jpg" />
           <BrandName>LFrigoDeSouza.NET</BrandName>
           <SocialMedias>
             <SocialMediaButton

@@ -14,7 +14,8 @@ const useDarkMode = () => {
     // const localTheme = window.localStorage.getItem('theme');
     // localTheme ? setTheme(localTheme) :
     //  setMode(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
-    setMode(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    // setMode(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    setMode('dark');
     setMountedComponent(true);
   }, []);
   return [theme, mountedComponent];
