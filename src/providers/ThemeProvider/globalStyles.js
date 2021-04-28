@@ -2,10 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   body {
-    background: ${({ theme }) => theme.background};
-    color: ${({ theme }) => theme.text};
-    font-family: Tahoma, Helvetica, Arial, Roboto, sans-serif;
+    background: ${({ theme }) => theme.color.background};
+    color: ${({ theme }) => theme.color.text};
+    font-family: ${({ theme }) => theme.font.family};
+    font-size: ${({ theme }) => theme.font.regular}
   }
-  `;
+`;
 
 export default GlobalStyles;

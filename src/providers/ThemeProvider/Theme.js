@@ -2,8 +2,8 @@ import { ThemeProvider } from 'styled-components';
 import React from 'react';
 import { node } from 'prop-types';
 import { darkTheme, lightTheme } from './Themes';
-import { GlobalStyles } from './globalStyles';
-import { useDarkMode } from '../../hooks/useDarkMode';
+import GlobalStyles from './globalStyles';
+import useDarkMode from '../../hooks/useDarkMode';
 
 export default function Theme({ children }) {
   const [theme, mountedComponent] = useDarkMode();
