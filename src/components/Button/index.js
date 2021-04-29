@@ -4,7 +4,7 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 import styled from 'styled-components';
 
 const ExternalButton = styled.a`
-  background-color: ${({ theme }) => theme.color.externalButtonBackground};
+  background-color: ${({ theme }) => theme.color.externalButtonAlternativeBackground};
   color: ${({ theme }) => theme.color.externalButtonText};
   padding: ${({ theme }) => theme.padding.medium};
   font-size: ${({ theme }) => theme.font.large};

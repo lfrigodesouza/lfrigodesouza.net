@@ -34,6 +34,7 @@ export const lightTheme = {
     backgroundOpaque: 'rgba(235, 235, 235, 0.4)',
     lightBackground: '#FFFFFF',
     externalButtonBackground: '#50FA7B',
+    externalButtonAlternativeBackground: '#F1FA8C',
     externalButtonText: '#000000',
     dividerGradient:
       'linear-gradient( 90deg, rgba(33, 34, 44, 1) 0%, rgba(171, 171, 174, 1) 50%, rgba(33, 34, 44, 1) 100%)',
@@ -50,6 +51,7 @@ export const darkTheme = {
     backgroundOpaque: 'rgba(33, 34, 44, 0.4)',
     lightBackground: '#3D3F52',
     externalButtonBackground: '#50fa7b',
+    externalButtonAlternativeBackground: '#F1FA8C',
     externalButtonText: '#000000',
     dividerGradient:
       'linear-gradient( 90deg, rgba(33, 34, 44, 1) 0%, rgba(171, 171, 174, 1) 50%, rgba(33, 34, 44, 1) 100%)',
