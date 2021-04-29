@@ -61,10 +61,12 @@ const TechList = styled.ul`
 `;
 
 const TechItem = styled.li`
-  padding: ${({ theme }) => theme.padding.medium} ${({ theme }) => theme.padding.large};
+  /* padding: ${({ theme }) => theme.padding.medium} ${({ theme }) => theme.padding.large}; */
+  padding-top: ${({ theme }) => theme.padding.medium};
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 130px;
   color: ${({ theme }) => theme.color.darkerText};
   & svg {
     font-size: 90px;
@@ -73,6 +75,7 @@ const TechItem = styled.li`
     color: ${({ theme }) => theme.color.text};
   }
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    width: 100px;
     & svg {
       font-size: 60px;
     }
