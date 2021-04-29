@@ -18,6 +18,12 @@ const ExternalButton = styled.a`
   &:hover {
     opacity: 0.8;
   }
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    margin-top: ${({ theme }) => theme.margin.small};
+    margin-bottom: ${({ theme }) => theme.margin.small};
+    font-size: ${({ theme }) => theme.font.regular};
+    padding: ${({ theme }) => theme.padding.regular};
+  }
 `;
 
 const Bar = styled.nav`
@@ -42,6 +48,11 @@ const BarContent = styled.div`
   align-items: center;
   padding: ${({ theme }) => theme.padding.small};
   justify-content: space-between;
+
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const Brand = styled.div`
@@ -51,6 +62,10 @@ const Brand = styled.div`
   align-items: center;
   justify-content: start;
   color: ${({ theme }) => theme.color.accentText};
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 const Photo = styled.img`
   max-height: ${({ theme }) => theme.navBarHeight};
@@ -62,21 +77,35 @@ const BrandName = styled.div`
   font-weight: bold;
   font-size: ${({ theme }) => theme.font.jumbo};
   margin-left: ${({ theme }) => theme.margin.small};
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    margin-left: 0px;
+  }
 `;
 
 const SocialMedias = styled.div`
-  padding-left: ${({ theme }) => theme.padding.medium};
+  width: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   font-size: ${({ theme }) => theme.font.larger};
+  margin-left: ${({ theme }) => theme.margin.medium};
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    margin-left: 0px;
+    margin-top: ${({ theme }) => theme.margin.small};
+  }
 `;
 
 const SocialMediaButton = styled.a`
   color: ${({ theme }) => theme.color.text};
   text-decoration: none;
-  margin-left: ${({ theme }) => theme.margin.medium};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  @media (max-width: ${({ theme }) => theme.media.mobile}) {
+    margin-top: ${({ theme }) => theme.margin.small};
+  }
 `;
 
 export default function NavBar() {

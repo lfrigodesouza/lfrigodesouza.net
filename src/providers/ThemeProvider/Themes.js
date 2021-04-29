@@ -1,6 +1,7 @@
 const defaultTheme = {
   padding: {
     small: '5px',
+    regular: '10px',
     medium: '15px',
     large: '25px',
   },
@@ -11,7 +12,7 @@ const defaultTheme = {
   maxContentWidth: '1200px',
   navBarHeight: '70px',
   media: {
-    mobile: '425px',
+    mobile: '600px',
   },
   font: {
     family: 'Ubuntu, Tahoma, Helvetica, Arial, Roboto, sans-serif',
