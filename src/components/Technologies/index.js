@@ -57,6 +57,7 @@ const TechList = styled.ul`
   align-items: center;
   list-style: none;
   flex-wrap: wrap;
+  padding: 0px;
 `;
 
 const TechItem = styled.li`
@@ -90,7 +91,7 @@ export default function Technologies() {
       <Title>Conhecimentos</Title>
       <TechList>
         {technologiesList.map((tech) => (
-          <TechItem>
+          <TechItem key={tech.description}>
             {tech.icon}
             <span>{tech.description}</span>
           </TechItem>

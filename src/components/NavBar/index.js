@@ -3,6 +3,19 @@ import styled from 'styled-components';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa';
 
+class SocialMediaLink {
+  constructor(icon, url, name) {
+    this.icon = icon;
+    this.name = name;
+    this.url = url;
+  }
+}
+const socialMediaList = [
+  new SocialMediaLink(<FaTwitter />, 'https://twitter.com/lfrigodesouza', 'twitter'),
+  new SocialMediaLink(<FaGithub />, 'https://github.com/lfrigodesouza', 'github'),
+  new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
+];
+
 const ExternalButton = styled.a`
   background-color: ${({ theme }) => theme.color.externalButtonBackground};
   color: ${({ theme }) => theme.color.externalButtonText};
@@ -116,27 +129,11 @@ export default function NavBar() {
           <Photo src="https://blog.lfrigodesouza.net/uploads/avatar.jpg" />
           <BrandName>LFrigoDeSouza.NET</BrandName>
           <SocialMedias>
-            <SocialMediaButton
-              href="https://twitter.com/lfrigodesouza"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaTwitter />
-            </SocialMediaButton>
-            <SocialMediaButton
-              href="https://github.com/lfrigodesouza"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub />
-            </SocialMediaButton>
-            <SocialMediaButton
-              href="mailto:contato@lfrigodesouza.net"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaEnvelope />
-            </SocialMediaButton>
+            {socialMediaList.map((item) => (
+              <SocialMediaButton href={item.url} target="_blank" rel="noreferrer" key={item.name}>
+                {item.icon}
+              </SocialMediaButton>
+            ))}
           </SocialMedias>
         </Brand>
         <ExternalButton href="https://blog.lfrigodesouza.net" target="_blank">
