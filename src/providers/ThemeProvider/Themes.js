@@ -8,6 +8,7 @@ const defaultTheme = {
   margin: {
     small: '5px;',
     medium: '10px',
+    large: '20px;',
   },
   maxContentWidth: '1200px',
   navBarHeight: '70px',
