@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 class SocialMediaLink {
   constructor(icon, url, name) {
@@ -74,7 +75,6 @@ const Brand = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  color: ${({ theme }) => theme.color.accentText};
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     flex-direction: column;
     justify-content: center;
@@ -86,10 +86,12 @@ const Photo = styled.img`
   height: 100%;
   width: auto;
 `;
-const BrandName = styled.div`
+const BrandName = styled(Link)`
   font-weight: bold;
   font-size: ${({ theme }) => theme.font.jumbo};
   margin-left: ${({ theme }) => theme.margin.small};
+  color: ${({ theme }) => theme.color.accentText};
+  text-decoration: none;
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     margin-left: 0px;
   }
@@ -127,7 +129,7 @@ export default function NavBar() {
       <BarContent>
         <Brand>
           <Photo src="https://blog.lfrigodesouza.net/uploads/avatar.jpg" />
-          <BrandName>LFrigoDeSouza.NET</BrandName>
+          <BrandName to="/">LFrigoDeSouza.NET</BrandName>
           <SocialMedias>
             {socialMediaList.map((item) => (
               <SocialMediaButton href={item.url} target="_blank" rel="noreferrer" key={item.name}>

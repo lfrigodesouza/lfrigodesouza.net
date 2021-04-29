@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import NotFoundPage from './pages/NotFoundPage';
 import Theme from './providers/ThemeProvider/Theme';
 
 ReactDOM.render(
@@ -10,6 +11,7 @@ ReactDOM.render(
       <Theme>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route path="*" component={NotFoundPage} />
         </Switch>
       </Theme>
     </BrowserRouter>
