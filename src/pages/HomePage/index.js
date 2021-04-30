@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import About from '../../components/About';
 import NavBar from '../../components/NavBar';
 import Technologies from '../../components/Technologies';
+import Articles from '../Articles';
 
 const Page = styled.div`
   width: 100%;
@@ -25,6 +26,7 @@ export default function HomePage() {
       <PageContent>
         <About />
         <Technologies />
+        <Articles />
       </PageContent>
     </Page>
   );

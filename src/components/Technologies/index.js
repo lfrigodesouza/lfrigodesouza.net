@@ -18,6 +18,7 @@ import { SiMicrosoftazure } from 'react-icons/si';
 import { BsShieldLock } from 'react-icons/bs';
 
 import Divider from '../Divider';
+import Section from '../Section';
 
 class Technology {
   constructor(icon, description) {
@@ -42,13 +43,6 @@ const technologiesList = [
   new Technology(<DiAngularSimple />, 'Angular'),
   new Technology(<FaAws />, 'AWS'),
 ];
-
-const Section = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-`;
 
 const TechList = styled.ul`
   display: flex;
