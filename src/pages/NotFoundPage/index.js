@@ -46,37 +46,47 @@ const RedirectWrapper = styled.div`
 
 export default function NotFoundPage() {
   const [articleUrl, setArticleUrl] = useState(false);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
   useEffect(() => {
-    setArticleUrl(/\/\d{4}\/\d{2}\/\d{2}\/.*/gi.test(location.pathname));
+    const isArticleUrl = /\/\d{4}\/\d{2}\/\d{2}\/.*/gi.test(location.pathname);
+    if (isArticleUrl) {
+      setArticleUrl(true);
+      window.location.href = `https://blog.lfrigodesouza.net${location.pathname}/${location.search}`;
+    }
+    setLoading(false);
   }, []);
 
   return (
     <>
-      <NavBar />
-      <Wrapper>
-        <Ops>
-          Oops
-          <AlertIcon />
-        </Ops>
-        404 - Página não encontrada
-        {articleUrl && (
-          <RedirectWrapper>
-            <Divider />
-            <span>
-              Se você está procurando por algum artigo, é possível que ele tenha sido movido para
-              este endereço:
-            </span>
-            <Button
-              href={`https://blog.lfrigodesouza.net${location.pathname}/${location.search}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {`https://blog.lfrigodesouza.net${location.pathname}`}
-            </Button>
-          </RedirectWrapper>
-        )}
-      </Wrapper>
+      {!loading && (
+        <>
+          <NavBar />
+          <Wrapper>
+            <Ops>
+              Oops
+              <AlertIcon />
+            </Ops>
+            404 - Página não encontrada
+            {articleUrl && (
+              <RedirectWrapper>
+                <Divider />
+                <span>
+                  Se você está procurando por algum artigo, é possível que ele tenha sido movido
+                  para este endereço:
+                </span>
+                <Button
+                  href={`https://blog.lfrigodesouza.net${location.pathname}/${location.search}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {`https://blog.lfrigodesouza.net${location.pathname}`}
+                </Button>
+              </RedirectWrapper>
+            )}
+          </Wrapper>
+        </>
+      )}
     </>
   );
 }
