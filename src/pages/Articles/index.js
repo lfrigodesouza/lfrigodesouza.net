@@ -3,7 +3,7 @@ import Divider from '../../components/Divider';
 import Section from '../../components/Section';
 
 export default function Articles() {
-  const CONTENT_URL = 'https://cors-anywhere.herokuapp.com/https://blog.lfrigodesouza.net/content.json';
+  const CONTENT_URL = 'https://lfrigodesouza-proxy.herokuapp.com/blog/content';
   const [loading, setLoading] = useState(true);
   const [articles, setArticles] = useState([]);
   useEffect(async () => {
@@ -22,7 +22,9 @@ export default function Articles() {
         <Section>
           <Divider />
           <h1>Artigos</h1>
-          {articles.map((article) => <span>{article.title}</span>)}
+          {articles.map((article) => (
+            <span>{article.title}</span>
+          ))}
         </Section>
       )}
     </>
