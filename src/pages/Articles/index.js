@@ -12,8 +12,7 @@ export default function Articles() {
       .then((data) => {
         setArticles(data.posts.slice(0, 5));
         setLoading(false);
-      })
-      .catch((error) => console.error(error));
+      });
   }, []);
 
   return (
