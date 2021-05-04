@@ -17,8 +17,8 @@ import { FaAws } from 'react-icons/fa';
 import { SiMicrosoftazure } from 'react-icons/si';
 import { BsShieldLock } from 'react-icons/bs';
 
-import Divider from '../Divider';
 import Section from '../Section';
+import Title from '../Title';
 
 class Technology {
   constructor(icon, description) {
@@ -52,10 +52,10 @@ const TechList = styled.ul`
   list-style: none;
   flex-wrap: wrap;
   padding: 0px;
+  margin: 0px;
 `;
 
 const TechItem = styled.li`
-  /* padding: ${({ theme }) => theme.padding.medium} ${({ theme }) => theme.padding.large}; */
   padding-top: ${({ theme }) => theme.padding.medium};
   display: flex;
   flex-direction: column;
@@ -76,15 +76,9 @@ const TechItem = styled.li`
   }
 `;
 
-const Title = styled.h1`
-  margin-bottom: 0px;
-  color: ${({ theme }) => theme.color.accentText};
-`;
-
 export default function Technologies() {
   return (
     <Section>
-      <Divider />
       <Title>Conhecimentos</Title>
       <TechList>
         {technologiesList.map((tech) => (

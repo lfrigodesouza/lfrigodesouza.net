@@ -38,6 +38,7 @@ export const lightTheme = {
     externalButtonText: '#000000',
     dividerGradient:
       'linear-gradient( 90deg, rgba(33, 34, 44, 1) 0%, rgba(171, 171, 174, 1) 50%, rgba(33, 34, 44, 1) 100%)',
+    yellow: '#F1FA8C',
   },
 };
 
@@ -56,5 +57,6 @@ export const darkTheme = {
     dividerGradient:
       'linear-gradient( 90deg, rgba(33, 34, 44, 1) 0%, rgba(171, 171, 174, 1) 50%, rgba(33, 34, 44, 1) 100%)',
     divider: '#38394b',
+    yellow: '#F1FA8C',
   },
 };
