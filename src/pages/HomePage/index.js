@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import About from '../../components/About';
 import Articles from '../../components/Articles';
+import Footer from '../../components/Footer/indexj';
 import NavBar from '../../components/NavBar';
 import Technologies from '../../components/Technologies';
 
@@ -28,6 +29,7 @@ export default function HomePage() {
         <Technologies />
         <Articles />
       </PageContent>
+      <Footer />
     </Page>
   );
 }

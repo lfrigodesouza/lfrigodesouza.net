@@ -138,7 +138,10 @@ export default function NavBar() {
             ))}
           </SocialMedias>
         </Brand>
-        <ExternalButton href="https://blog.lfrigodesouza.net" target="_blank">
+        <ExternalButton
+          href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
+          target="_blank"
+        >
           Blog
           <HiOutlineExternalLink />
         </ExternalButton>

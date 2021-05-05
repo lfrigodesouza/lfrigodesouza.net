@@ -25,7 +25,7 @@ const Ops = styled.div`
 `;
 
 const AlertIcon = styled(AiFillWarning)`
-  color: #ff5555;
+  color: ${({ theme }) => theme.color.red};
 `;
 
 const RedirectWrapper = styled.div`
