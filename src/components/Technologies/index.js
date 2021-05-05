@@ -1,20 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  DiAngularSimple,
-  DiCss3,
-  DiDotnet,
-  DiDocker,
-  DiGit,
-  DiHtml5,
-  DiJsBadge,
-  DiRedis,
-  DiMsqlServer,
-  DiReact,
-  DiScrum,
+  DiDotnet, DiScrum, DiVim, DiMongodb, DiRedis,
 } from 'react-icons/di';
-import { FaAws } from 'react-icons/fa';
-import { SiMicrosoftazure } from 'react-icons/si';
+import {
+  SiOracle,
+  SiKubernetes,
+  SiMicrosoftazure,
+  SiFirebase,
+  SiGit,
+  SiReact,
+  SiDocker,
+  SiAmazonaws,
+  SiMicrosoftsqlserver,
+} from 'react-icons/si';
+
 import { BsShieldLock } from 'react-icons/bs';
 
 import Section from '../Section';
@@ -29,19 +29,20 @@ class Technology {
 
 const technologiesList = [
   new Technology(<DiDotnet />, '.NET'),
-  new Technology(<DiReact />, 'React'),
-  new Technology(<DiGit />, 'Git'),
-  new Technology(<DiDocker />, 'Docker'),
-  new Technology(<SiMicrosoftazure />, 'Azure'),
-  new Technology(<DiScrum />, 'Scrum'),
-  new Technology(<DiCss3 />, 'CSS3'),
-  new Technology(<DiHtml5 />, 'HTML5'),
-  new Technology(<DiJsBadge />, 'JavaScript'),
   new Technology(<BsShieldLock />, 'DevSec'),
+  new Technology(<SiGit />, 'Git'),
+  new Technology(<SiReact />, 'React'),
+  new Technology(<SiDocker />, 'Docker'),
+  new Technology(<SiKubernetes />, 'Kubernetes'),
+  new Technology(<SiMicrosoftazure />, 'Azure'),
+  new Technology(<SiAmazonaws />, 'AWS'),
+  new Technology(<DiScrum />, 'Agilidade'),
+  new Technology(<SiMicrosoftsqlserver />, 'MSSQLServer'),
+  new Technology(<SiOracle />, 'Oracle'),
+  new Technology(<DiMongodb />, 'MongoDB'),
   new Technology(<DiRedis />, 'Redis'),
-  new Technology(<DiMsqlServer />, 'MSSQLServer'),
-  new Technology(<DiAngularSimple />, 'Angular'),
-  new Technology(<FaAws />, 'AWS'),
+  new Technology(<SiFirebase />, 'Firebase'),
+  new Technology(<DiVim />, 'Vim'),
 ];
 
 const TechList = styled.ul`
