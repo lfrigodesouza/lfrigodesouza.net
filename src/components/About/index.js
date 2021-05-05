@@ -1,18 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import Section from '../Section';
 
-const Section = styled.section`
+const AboutSection = styled(Section)`
   font-size: ${({ theme }) => theme.font.large};
   text-align: justify;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 `;
 
 export default function About() {
   return (
-    <Section>
+    <AboutSection showDivider={false}>
       <p>
         Me chamo Lucas, sou formado em Engenharia da Computação, tenho MBA em Engenharia de Software
         e estou cursando um MBA em CyberSecurity.
@@ -29,6 +26,6 @@ export default function About() {
         Trabalhei por alguns anos na área da Indústria 4.0, mas hoje trabalho na área do mercado
         financeiro e investimentos.
       </p>
-    </Section>
+    </AboutSection>
   );
 }
