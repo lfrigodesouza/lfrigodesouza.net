@@ -9,8 +9,10 @@ const defaultTheme = {
     small: '5px;',
     medium: '10px',
     large: '20px;',
+    larger: '30px',
   },
   maxContentWidth: '1200px',
+  maxModalWidth: '400px',
   navBarHeight: '70px',
   media: {
     mobile: '600px',
