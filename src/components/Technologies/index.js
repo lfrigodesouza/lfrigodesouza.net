@@ -1,49 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import {
-  DiDotnet, DiScrum, DiVim, DiMongodb, DiRedis,
-} from 'react-icons/di';
-import {
-  SiOracle,
-  SiKubernetes,
-  SiMicrosoftazure,
-  SiFirebase,
-  SiGit,
-  SiReact,
-  SiDocker,
-  SiAmazonaws,
-  SiMicrosoftsqlserver,
-} from 'react-icons/si';
-
-import { BsShieldLock } from 'react-icons/bs';
-
+import { TechnologiesData as technologiesList } from './TechnologiesData';
 import Section from '../Section';
 import Title from '../Title';
-
-class Technology {
-  constructor(icon, description) {
-    this.icon = icon;
-    this.description = description;
-  }
-}
-
-const technologiesList = [
-  new Technology(<DiDotnet />, '.NET'),
-  new Technology(<BsShieldLock />, 'DevSec'),
-  new Technology(<SiGit />, 'Git'),
-  new Technology(<SiReact />, 'React'),
-  new Technology(<SiDocker />, 'Docker'),
-  new Technology(<SiKubernetes />, 'Kubernetes'),
-  new Technology(<SiMicrosoftazure />, 'Azure'),
-  new Technology(<SiAmazonaws />, 'AWS'),
-  new Technology(<DiScrum />, 'Agilidade'),
-  new Technology(<SiMicrosoftsqlserver />, 'MSSQLServer'),
-  new Technology(<SiOracle />, 'Oracle'),
-  new Technology(<DiMongodb />, 'MongoDB'),
-  new Technology(<DiRedis />, 'Redis'),
-  new Technology(<SiFirebase />, 'Firebase'),
-  new Technology(<DiVim />, 'Vim'),
-];
+import ModalMessage from '../ModalMessage';
 
 const TechList = styled.ul`
   display: flex;
@@ -78,17 +38,40 @@ const TechItem = styled.li`
 `;
 
 export default function Technologies() {
+  const [technology, setTechnology] = useState('');
+  const [description, setDescription] = useState('');
+  const [showModal, setShowModal] = useState(false);
+  function modalCloseHandler(evt) {
+    evt.preventDefault();
+    setShowModal(false);
+  }
+
+  function technologyClickHandler(techName, techDescription) {
+    setTechnology(techName);
+    setDescription(techDescription);
+    setShowModal(true);
+  }
+
   return (
     <Section>
       <Title>Conhecimentos</Title>
       <TechList>
         {technologiesList.map((tech) => (
-          <TechItem key={tech.description}>
+          <TechItem
+            key={tech.name}
+            onClick={() => technologyClickHandler(tech.name, tech.description)}
+          >
             {tech.icon}
-            <span>{tech.description}</span>
+            <span>{tech.name}</span>
           </TechItem>
         ))}
       </TechList>
+      <ModalMessage
+        showModal={showModal}
+        modalCloseHandler={modalCloseHandler}
+        technology={technology}
+        description={description}
+      />
     </Section>
   );
 }
