@@ -1,8 +1,8 @@
+import { Heading } from '@dracula/dracula-ui';
 import { bool, node, string } from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import Divider from '../Divider';
-import Title from '../Title';
 
 const SectionWrapper = styled.section`
   display: flex;
@@ -16,7 +16,7 @@ export default function Section({ children, title, showDivider }) {
   return (
     <SectionWrapper>
       {showDivider && <Divider />}
-      {title && <Title>{title}</Title>}
+      {title && <Heading>{title}</Heading>}
       {children}
     </SectionWrapper>
   );

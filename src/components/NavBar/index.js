@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import {
+  Avatar, Box, Button, Heading, Text,
+} from '@dracula/dracula-ui';
 
 class SocialMediaLink {
   constructor(icon, url, name) {
@@ -18,7 +21,7 @@ const socialMediaList = [
 ];
 
 const ExternalButton = styled.a`
-  background-color: ${({ theme }) => theme.color.externalButtonBackground};
+  background-color: var(--green);
   color: ${({ theme }) => theme.color.externalButtonText};
   padding: ${({ theme }) => theme.padding.medium};
   font-size: ${({ theme }) => theme.font.large};
@@ -40,9 +43,7 @@ const ExternalButton = styled.a`
   }
 `;
 
-const Bar = styled.nav`
-  background: ${({ theme }) => theme.color.backgroundOpaque};
-  width: 100%;
+const Bar = styled(Box)`
   position: sticky;
   top: 0;
   backdrop-filter: blur(5px);
@@ -50,7 +51,8 @@ const Bar = styled.nav`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 1px ${({ theme }) => theme.color.divider};
+  border-bottom: solid 1px var(--whiteLight);
+  width: 100%;
 `;
 
 const BarContent = styled.div`
@@ -70,7 +72,6 @@ const BarContent = styled.div`
 `;
 
 const Brand = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -80,17 +81,10 @@ const Brand = styled.div`
     justify-content: center;
   }
 `;
-const Photo = styled.img`
-  max-height: ${({ theme }) => theme.navBarHeight};
-  border-radius: 100%;
-  height: 100%;
-  width: auto;
-`;
-const BrandName = styled(Link)`
+const BrandName = styled(Heading)`
   font-weight: bold;
   font-size: ${({ theme }) => theme.font.jumbo};
   margin-left: ${({ theme }) => theme.margin.small};
-  color: ${({ theme }) => theme.color.accentText};
   text-decoration: none;
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     margin-left: 0px;
@@ -125,11 +119,16 @@ const SocialMediaButton = styled.a`
 
 export default function NavBar() {
   return (
-    <Bar>
+    <Bar as="nav">
       <BarContent>
         <Brand>
-          <Photo src="https://blog.lfrigodesouza.net/uploads/avatar.jpg" />
-          <BrandName to="/">LFrigoDeSouza.NET</BrandName>
+          <Avatar
+            src="https://blog.lfrigodesouza.net/uploads/avatar.jpg"
+            title="LFrigoDeSouza.NET"
+            color="blackSecondary"
+            borderVariant="large"
+          />
+          <BrandName color="cyanGreen">LFrigoDeSouza.NET</BrandName>
           <SocialMedias>
             {socialMediaList.map((item) => (
               <SocialMediaButton href={item.url} target="_blank" rel="noreferrer" key={item.name}>
@@ -139,10 +138,14 @@ export default function NavBar() {
           </SocialMedias>
         </Brand>
         <ExternalButton
+          size="lg"
+          as="a"
           href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
           target="_blank"
         >
-          Blog
+          <Text color="black" weight="semibold">
+            Blog
+          </Text>
           <HiOutlineExternalLink />
         </ExternalButton>
       </BarContent>

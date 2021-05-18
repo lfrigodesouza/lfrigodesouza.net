@@ -1,3 +1,4 @@
+import { Text } from '@dracula/dracula-ui';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -9,13 +10,14 @@ const FooterBar = styled.div`
   justify-content: center;
   align-items: center;
   border-top: solid 1px ${({ theme }) => theme.color.divider};
-  color: ${({ theme }) => theme.color.faddedText};
 `;
 
 export default function Footer() {
   return (
     <FooterBar>
-      <p>LFrigoDeSouza.NET | © 2020 – 2021</p>
+      <Text as="p" color="purpleCyan">
+        LFrigoDeSouza.NET | © 2020 – 2021
+      </Text>
     </FooterBar>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Heading, Text } from '@dracula/dracula-ui';
 import { TechnologiesData as technologiesList } from './TechnologiesData';
 import Section from '../Section';
-import Title from '../Title';
 import ModalMessage from '../ModalMessage';
 
 const TechList = styled.ul`
@@ -54,7 +54,7 @@ export default function Technologies() {
 
   return (
     <Section>
-      <Title>Conhecimentos</Title>
+      <Heading color="purpleCyan">Conhecimentos</Heading>
       <TechList>
         {technologiesList.map((tech) => (
           <TechItem
@@ -62,7 +62,7 @@ export default function Technologies() {
             onClick={() => technologyClickHandler(tech.name, tech.description)}
           >
             {tech.icon}
-            <span>{tech.name}</span>
+            <Text as="span">{tech.name}</Text>
           </TechItem>
         ))}
       </TechList>

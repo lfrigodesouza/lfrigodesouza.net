@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { AiFillWarning } from 'react-icons/ai';
 import { useLocation } from 'react-router-dom';
+import { Heading, Text } from '@dracula/dracula-ui';
 import NavBar from '../../components/NavBar';
 import Button from '../../components/Button';
 import Divider from '../../components/Divider';
@@ -9,6 +10,7 @@ import Divider from '../../components/Divider';
 const Wrapper = styled.div`
   width: 100%;
   min-height: 50vh;
+  height: 100%aut;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -64,23 +66,25 @@ export default function NotFoundPage() {
           <NavBar />
           <Wrapper>
             <Ops>
-              Oops
+              <Heading size="2xl">Oops</Heading>
               <AlertIcon />
             </Ops>
-            404 - Página não encontrada
+            <Text>404 - Página não encontrada</Text>
             {articleUrl && (
               <RedirectWrapper>
                 <Divider />
-                <span>
+                <Text as="span">
                   Se você está procurando por algum artigo, é possível que ele tenha sido movido
                   para este endereço:
-                </span>
+                </Text>
                 <Button
                   href={`https://blog.lfrigodesouza.net${location.pathname}/${location.search}`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {`https://blog.lfrigodesouza.net${location.pathname}`}
+                  <Text color="black" weight="semibold" size="sm">
+                    {`https://blog.lfrigodesouza.net${location.pathname}`}
+                  </Text>
                 </Button>
               </RedirectWrapper>
             )}
