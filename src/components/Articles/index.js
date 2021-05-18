@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { HiArrowNarrowRight } from 'react-icons/hi';
 import { BiErrorCircle } from 'react-icons/bi';
+import { Heading, Paragraph, Text } from '@dracula/dracula-ui';
 import Loader from '../Loader';
 import Section from '../Section';
-import Title from '../Title';
 import Button from '../Button';
 
 const ArticlesList = styled.ul`
@@ -95,23 +96,31 @@ export default function Articles() {
   return (
     <>
       <Section>
-        <Title>Artigos</Title>
+        <Heading color="purpleCyan" size="xl">
+          Artigos
+        </Heading>
         {!loading && !errorMessage && (
           <ArticlesList>
             {articles.map((item) => (
               <ArticleItem key={item.slug}>
-                <ArticleDate>{new Date(item.date).toLocaleString()}</ArticleDate>
-                <ArticleTitle>{item.title}</ArticleTitle>
-                <ArticleExcerpt>
+                <Text color="white" size="xs" lineHeight="xs">
+                  {new Date(item.date).toLocaleString()}
+                </Text>
+                <Heading color="yellow" size="lg">
+                  {item.title}
+                </Heading>
+                <Paragraph>
                   {item.text.slice(0, EXCERPT_LENGTH)}
                   {' ...'}
-                </ArticleExcerpt>
+                </Paragraph>
                 <ArticleKeepReading
                   href={`${item.permalink}?utm_medium=site&utm_source=site`}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Continuar lendo
+                  <Text as="span" color="green">
+                    Continuar lendo
+                  </Text>
                   <HiArrowNarrowRight />
                 </ArticleKeepReading>
               </ArticleItem>
@@ -120,7 +129,9 @@ export default function Articles() {
               href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
               target="_blank"
             >
-              Ver mais
+              <Text color="black" weight="semibold">
+                Veja mais
+              </Text>
             </ArticlesButton>
           </ArticlesList>
         )}
@@ -128,12 +139,16 @@ export default function Articles() {
         {errorMessage && (
           <ErrorWrapper>
             <ErrorIcon />
-            <ErrorMessage>{errorMessage}</ErrorMessage>
+            <Text size="sm" color="red">
+              {errorMessage}
+            </Text>
             <ArticlesButton
               href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
               target="_blank"
             >
-              Veja direto no Blog
+              <Text color="black" weight="semibold">
+                Veja direto no Blog
+              </Text>
             </ArticlesButton>
           </ErrorWrapper>
         )}

@@ -42,7 +42,7 @@ export const lightTheme = {
     externalButtonText: '#000000',
     dividerGradient:
       'linear-gradient( 90deg, rgba(33, 34, 44, 1) 0%, rgba(171, 171, 174, 1) 50%, rgba(33, 34, 44, 1) 100%)',
-    yellow: '#F1FA8C',
+    yellow: '#FFFF80',
     green: '#50fa7b',
     red: '#FF5555',
   },

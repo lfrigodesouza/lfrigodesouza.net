@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import Theme from './providers/ThemeProvider/Theme';
+import '@dracula/dracula-ui/styles/dracula-ui.css';
 
 ReactDOM.render(
   <React.StrictMode>
