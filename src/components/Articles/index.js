@@ -1,7 +1,6 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 import { BiErrorCircle } from 'react-icons/bi';
 import { Heading, Paragraph, Text } from '@dracula/dracula-ui';
 import Loader from '../Loader';
@@ -17,24 +16,6 @@ const ArticlesList = styled.ul`
 const ArticleItem = styled.li`
   list-style: none;
   margin-bottom: ${({ theme }) => theme.margin.large};
-`;
-
-const ArticleTitle = styled.div`
-  font-size: ${({ theme }) => theme.font.larger};
-  color: ${({ theme }) => theme.color.yellow};
-  margin-bottom: ${({ theme }) => theme.margin.medium};
-`;
-
-const ArticleDate = styled.p`
-  margin-top: ${({ theme }) => theme.margin.small};
-  margin-bottom: 0px;
-  color: ${({ theme }) => theme.color.accentText};
-  font-size: ${({ theme }) => theme.font.small};
-`;
-
-const ArticleExcerpt = styled.p`
-  margin-top: 0px;
-  margin-bottom: ${({ theme }) => theme.margin.small};
 `;
 
 const ArticleKeepReading = styled.a`
@@ -60,11 +41,6 @@ const ErrorWrapper = styled.div`
   justify-content: center;
   align-items: center;
   color: ${({ theme }) => theme.color.red};
-`;
-
-const ErrorMessage = styled.p`
-  margin: ${({ theme }) => theme.margin.small};
-  margin-bottom: ${({ theme }) => theme.margin.medium};
 `;
 
 const ErrorIcon = styled(BiErrorCircle)`
@@ -118,7 +94,7 @@ export default function Articles() {
                   <Text as="span" color="green">
                     Continuar lendo
                   </Text>
-                  <HiArrowNarrowRight />
+                  <HiOutlineExternalLink className="drac-text-green" />
                 </ArticleKeepReading>
               </ArticleItem>
             ))}
