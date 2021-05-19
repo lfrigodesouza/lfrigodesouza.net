@@ -126,9 +126,7 @@ export default function Articles() {
               href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
               target="_blank"
             >
-              <Text color="black" weight="semibold">
-                Veja mais
-              </Text>
+              Veja mais
             </ArticlesButton>
           </ArticlesList>
         )}
@@ -143,9 +141,7 @@ export default function Articles() {
               href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
               target="_blank"
             >
-              <Text color="black" weight="semibold">
-                Veja direto no Blog
-              </Text>
+              Veja direto no Blog
             </ArticlesButton>
           </ErrorWrapper>
         )}
