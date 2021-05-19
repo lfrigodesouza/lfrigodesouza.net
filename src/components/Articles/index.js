@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { HiArrowNarrowRight } from 'react-icons/hi';
+import { HiOutlineExternalLink } from 'react-icons/hi';
 import { BiErrorCircle } from 'react-icons/bi';
 import { Heading, Paragraph, Text } from '@dracula/dracula-ui';
 import Loader from '../Loader';
@@ -118,7 +118,7 @@ export default function Articles() {
                   <Text as="span" color="green">
                     Continuar lendo
                   </Text>
-                  <HiArrowNarrowRight />
+                  <HiOutlineExternalLink className="drac-text-green" />
                 </ArticleKeepReading>
               </ArticleItem>
             ))}
