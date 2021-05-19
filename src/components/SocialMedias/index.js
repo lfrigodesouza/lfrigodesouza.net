@@ -16,17 +16,13 @@ const socialMediaList = [
   new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
 ];
 const SocialMediasButtons = styled.div`
-  width: 100px;
+  width: 150px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  font-size: ${({ theme }) => theme.font.larger};
-  margin-left: ${({ theme }) => theme.margin.medium};
+  font-size: ${({ theme }) => theme.font.jumbo};
   margin-top: ${({ theme }) => theme.margin.small};
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    margin-left: 0px;
-  }
 `;
 
 const SocialMediaButton = styled.a`
@@ -44,12 +40,16 @@ const SocialMediaButton = styled.a`
   }
 `;
 
+const Title = styled(Heading)`
+  text-align: center;
+`;
+
 export default function SocialMedias() {
   return (
     <>
-      <Heading size="sm" color="yellowPink">
+      <Title size="sm" color="yellowPink">
         Entre em contato pelas redes sociais!
-      </Heading>
+      </Title>
       <SocialMediasButtons>
         {socialMediaList.map((item) => (
           <SocialMediaButton href={item.url} target="_blank" rel="noreferrer" key={item.name}>

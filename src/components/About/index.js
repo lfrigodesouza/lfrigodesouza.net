@@ -5,7 +5,8 @@ import Section from '../Section';
 import SocialMedias from '../SocialMedias';
 
 const Title = styled(Heading)`
-  margin: 30px;
+  margin: 40px;
+  text-align: center;
 `;
 
 export default function About() {
