@@ -1,7 +1,7 @@
-import { Heading } from '@dracula/dracula-ui';
-import { bool, node, string } from 'prop-types';
 import React from 'react';
+import { bool, node, string } from 'prop-types';
 import styled from 'styled-components';
+import { Heading } from '@dracula/dracula-ui';
 import Divider from '../Divider';
 
 const SectionWrapper = styled.section`
@@ -12,22 +12,26 @@ const SectionWrapper = styled.section`
   margin-bottom: ${({ theme }) => theme.margin.medium};
 `;
 
-export default function Section({ children, title, showDivider }) {
+export default function Section({ children, showDivider, title }) {
   return (
     <SectionWrapper>
       {showDivider && <Divider />}
-      {title && <Heading>{title}</Heading>}
+      {title && (
+        <Heading color="purpleCyan" style={{ fontSize: 'var(--font-3xl)' }}>
+          {title}
+        </Heading>
+      )}
       {children}
     </SectionWrapper>
   );
 }
 
 Section.defaultProps = {
-  title: '',
   showDivider: true,
+  title: '',
 };
 Section.propTypes = {
   children: node.isRequired,
-  title: string,
   showDivider: bool,
+  title: string,
 };

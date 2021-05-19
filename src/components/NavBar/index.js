@@ -1,24 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import styled from 'styled-components';
 import { HiOutlineExternalLink } from 'react-icons/hi';
-import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa';
 import {
-  Avatar, Box, Button, Heading, Text,
+  Avatar, Box, Heading, Text,
 } from '@dracula/dracula-ui';
-
-class SocialMediaLink {
-  constructor(icon, url, name) {
-    this.icon = icon;
-    this.name = name;
-    this.url = url;
-  }
-}
-const socialMediaList = [
-  new SocialMediaLink(<FaTwitter />, 'https://twitter.com/lfrigodesouza', 'twitter'),
-  new SocialMediaLink(<FaGithub />, 'https://github.com/lfrigodesouza', 'github'),
-  new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
-];
 
 const ExternalButton = styled.a`
   background-color: var(--green);
@@ -83,37 +68,11 @@ const Brand = styled.div`
 `;
 const BrandName = styled(Heading)`
   font-weight: bold;
-  font-size: ${({ theme }) => theme.font.jumbo};
   margin-left: ${({ theme }) => theme.margin.small};
   text-decoration: none;
+  font-size: var(--font-4xl);
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     margin-left: 0px;
-  }
-`;
-
-const SocialMedias = styled.div`
-  width: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-size: ${({ theme }) => theme.font.larger};
-  margin-left: ${({ theme }) => theme.margin.medium};
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    margin-left: 0px;
-    margin-top: ${({ theme }) => theme.margin.small};
-  }
-`;
-
-const SocialMediaButton = styled.a`
-  color: ${({ theme }) => theme.color.text};
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-between;
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    margin-top: ${({ theme }) => theme.margin.small};
   }
 `;
 
@@ -129,13 +88,6 @@ export default function NavBar() {
             borderVariant="large"
           />
           <BrandName color="cyanGreen">LFrigoDeSouza.NET</BrandName>
-          <SocialMedias>
-            {socialMediaList.map((item) => (
-              <SocialMediaButton href={item.url} target="_blank" rel="noreferrer" key={item.name}>
-                {item.icon}
-              </SocialMediaButton>
-            ))}
-          </SocialMedias>
         </Brand>
         <ExternalButton
           size="lg"

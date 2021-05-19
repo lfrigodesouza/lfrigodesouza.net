@@ -13,7 +13,6 @@ import {
   SiAmazonaws,
   SiMicrosoftsqlserver,
 } from 'react-icons/si';
-
 import { BsShieldLock } from 'react-icons/bs';
 
 export class Technology {
@@ -29,7 +28,7 @@ export const TechnologiesData = [
     <DiDotnet />,
     '.NET',
     `Tenho 5 anos de experiência com desenvolvimento backend com .NET e C#. 
-    <br>Atualmente trabalho com a construção e manutenção de WebApis com .NET Core. Trabalho diariamente com projetos com MediatR, RabbitMQ, CQRS, etc.`,
+    <br>Atualmente trabalho com a construção e manutenção de WebApis com .NET Core. Trabalho diariamente com projetos com MediatR, RabbitMQ e CQRS.`,
   ),
   new Technology(
     <BsShieldLock />,
@@ -40,13 +39,14 @@ export const TechnologiesData = [
   new Technology(
     <SiGit />,
     'Git',
-    'Trabalho diariamente com Git, mantendo os mais diversos repositórios e trabalhando em colaboração com outras pessoas no time.',
+    `Trabalho diariamente com Git, mantendo os mais diversos repositórios e trabalhando em colaboração com outras pessoas no time e com outros times.
+    <br>Vivência com GitFlow e a cultura de PRs e Code Review.`,
   ),
   new Technology(
     <SiReact />,
     'React',
-    `Apesar de ter o foco no backend, também tenho conhecimentos em ReacJS. 
-    <br>Este site mesmo foi todo construindo utilizando essa tecnologia, com hooks, styled-components, etc.`,
+    `Também tenho conhecimentos em ReactJS, mesmo hoje meu foco sendo no desenvolvimento backend. 
+    <br>Este site mesmo foi todo construindo utilizando React, com hooks e styled-components.`,
   ),
   new Technology(
     <SiDocker />,
@@ -56,7 +56,7 @@ export const TechnologiesData = [
   new Technology(
     <SiKubernetes />,
     'Kubernetes',
-    'Contato diário com aplicações rodando no Kubernetes, especificamente no EKS com o Helm. Tenho experiência também na configuração das aplicações para ambiente Kubernetes, assim como a manutenção de diagnósticos nos pods.',
+    'Contato diário com aplicações rodando no Kubernetes, especificamente no EKS com o Helm. Tenho experiência também na configuração das aplicações para ambiente Kubernetes, assim como a manutenção e diagnósticos dos pods.',
   ),
   new Technology(
     <SiMicrosoftazure />,
@@ -81,7 +81,7 @@ export const TechnologiesData = [
   new Technology(
     <SiOracle />,
     'Oracle',
-    `Tenho um pouco menos de experiência com Oracle do que com MSSQLServer, mas trabalho atualmente principalmente com esse tipo de banco de dados. 
+    `Hoje trabalho principalmente com bancos de dados Oracle. 
     <br>Tenho conhecimento na instalação de instâncias, gerenciamento de schemas, execução e otimização de queries, etc.`,
   ),
   new Technology(
@@ -97,6 +97,6 @@ export const TechnologiesData = [
   new Technology(
     <DiVim />,
     'Vim',
-    'Não basta só usar o Vim, tem de falar pra todo mundo que usa! Se você nunca experimentou, vale a pena dar uma olhada. Apesar de ter uma curva de aprendizado e parecer assustador no começo, vale muito a pena pelo ganho de produtividade. <p>Vi ❤</p>',
+    'Não basta só usar o Vim, tem de falar pra todo mundo que usa! Se você nunca experimentou, vale a pena dar uma olhada. Apesar de ter uma curva de aprendizado e parecer assustador no começo, vale muito a pena pelo ganho de produtividade. <p class="drac-text-green">❤ Vi</p>',
   ),
 ];
