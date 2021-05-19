@@ -6,11 +6,15 @@ import { Heading, Text } from '@dracula/dracula-ui';
 import NavBar from '../../components/NavBar';
 import Button from '../../components/Button';
 import Divider from '../../components/Divider';
+import Footer from '../../components/Footer';
 
 const Wrapper = styled.div`
+  position: relative;
+`;
+
+const Content = styled.div`
   width: 100%;
-  min-height: 50vh;
-  height: 100%aut;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,11 +64,11 @@ export default function NotFoundPage() {
   }, []);
 
   return (
-    <>
+    <Wrapper>
       {!loading && (
         <>
           <NavBar />
-          <Wrapper>
+          <Content>
             <Ops>
               <Heading size="2xl">Oops</Heading>
               <AlertIcon />
@@ -82,15 +86,14 @@ export default function NotFoundPage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <Text color="black" weight="semibold" size="sm">
-                    {`https://blog.lfrigodesouza.net${location.pathname}`}
-                  </Text>
+                  {`https://blog.lfrigodesouza.net${location.pathname}`}
                 </Button>
               </RedirectWrapper>
             )}
-          </Wrapper>
+          </Content>
+          <Footer fixed />
         </>
       )}
-    </>
+    </Wrapper>
   );
 }

@@ -4,31 +4,24 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 import styled from 'styled-components';
 
 const ExternalButton = styled.a`
-  background-color: ${({ theme }) => theme.color.yellow};
-  color: ${({ theme }) => theme.color.externalButtonText};
-  padding: ${({ theme }) => theme.padding.medium};
-  font-size: ${({ theme }) => theme.font.large};
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   text-decoration: none;
-  &:hover {
-    opacity: 0.8;
-  }
   & svg {
     margin-left: ${({ theme }) => theme.margin.small};
-  }
-  @media (max-width: ${({ theme }) => theme.media.mobile}) {
-    font-size: ${({ theme }) => theme.font.regular};
   }
 `;
 
 export default function Button({ children, href, target }) {
   return (
-    <ExternalButton href={href} target={target}>
-      <span>{children}</span>
+    <ExternalButton
+      className="drac-btn drac-bg-yellow drac-btn-outline drac-text-yellow drac-m-sm"
+      href={href}
+      target={target}
+    >
+      {children}
       <HiOutlineExternalLink />
     </ExternalButton>
   );

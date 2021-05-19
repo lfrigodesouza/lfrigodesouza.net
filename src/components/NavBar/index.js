@@ -4,27 +4,19 @@ import { HiOutlineExternalLink } from 'react-icons/hi';
 import {
   Avatar, Box, Heading, Text,
 } from '@dracula/dracula-ui';
+import { Link } from 'react-router-dom';
 
 const ExternalButton = styled.a`
   background-color: var(--green);
   color: ${({ theme }) => theme.color.externalButtonText};
-  padding: ${({ theme }) => theme.padding.medium};
-  font-size: ${({ theme }) => theme.font.large};
-  border-radius: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  width: 70px;
   text-decoration: none;
-  &:hover {
-    opacity: 0.8;
-  }
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     margin-top: ${({ theme }) => theme.margin.small};
     margin-bottom: ${({ theme }) => theme.margin.small};
-    font-size: ${({ theme }) => theme.font.regular};
-    padding: ${({ theme }) => theme.padding.regular};
   }
 `;
 
@@ -61,6 +53,7 @@ const Brand = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: start;
+  text-decoration: none;
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     flex-direction: column;
     justify-content: center;
@@ -80,7 +73,7 @@ export default function NavBar() {
   return (
     <Bar as="nav">
       <BarContent>
-        <Brand>
+        <Brand as={Link} to="/">
           <Avatar
             src="https://blog.lfrigodesouza.net/uploads/avatar.jpg"
             title="LFrigoDeSouza.NET"
@@ -90,10 +83,10 @@ export default function NavBar() {
           <BrandName color="cyanGreen">LFrigoDeSouza.NET</BrandName>
         </Brand>
         <ExternalButton
-          size="lg"
-          as="a"
+          className="drac-btn drac-btn-lg drac-bg-green"
           href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <Text color="black" weight="semibold">
             Blog
