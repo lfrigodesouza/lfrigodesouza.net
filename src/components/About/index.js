@@ -1,11 +1,21 @@
-import { Paragraph } from '@dracula/dracula-ui';
+import { Heading, Paragraph } from '@dracula/dracula-ui';
 import React from 'react';
+import styled from 'styled-components';
 import Section from '../Section';
+import SocialMedias from '../SocialMedias';
+
+const Title = styled(Heading)`
+  margin: 40px;
+  text-align: center;
+`;
 
 export default function About() {
   return (
     <Section showDivider={false}>
-      <Paragraph align="justify">
+      <Title size="2xl" color="green">
+        Olá, seja bem-vindo(a)!
+      </Title>
+      <Paragraph align="justify" lineHeight="lg">
         Me chamo Lucas, sou formado em Engenharia da Computação, tenho MBA em Engenharia de Software
         e estou cursando um MBA em CyberSecurity.
         <br />
@@ -21,6 +31,7 @@ export default function About() {
         Trabalhei por alguns anos na área da Indústria 4.0, mas hoje trabalho na área do mercado
         financeiro e investimentos.
       </Paragraph>
+      <SocialMedias />
     </Section>
   );
 }

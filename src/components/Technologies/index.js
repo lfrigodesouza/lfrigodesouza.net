@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Heading, Text } from '@dracula/dracula-ui';
+import { Text } from '@dracula/dracula-ui';
 import { TechnologiesData as technologiesList } from './TechnologiesData';
 import Section from '../Section';
 import ModalMessage from '../ModalMessage';
@@ -28,12 +28,22 @@ const TechItem = styled.li`
   }
   &:hover {
     color: ${({ theme }) => theme.color.text};
+    cursor: pointer;
   }
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     width: 100px;
     & svg {
       font-size: 60px;
     }
+  }
+`;
+
+const TechText = styled(Text)`
+  visibility: hidden;
+  transition: all ease-in-out 0.2s;
+  ${TechItem}:hover & {
+    transform: translateY(5px);
+    visibility: visible;
   }
 `;
 
@@ -53,8 +63,7 @@ export default function Technologies() {
   }
 
   return (
-    <Section>
-      <Heading color="purpleCyan">Conhecimentos</Heading>
+    <Section title="Conhecimentos">
       <TechList>
         {technologiesList.map((tech) => (
           <TechItem
@@ -62,7 +71,7 @@ export default function Technologies() {
             onClick={() => technologyClickHandler(tech.name, tech.description)}
           >
             {tech.icon}
-            <Text as="span">{tech.name}</Text>
+            <TechText as="span">{tech.name}</TechText>
           </TechItem>
         ))}
       </TechList>

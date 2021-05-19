@@ -95,10 +95,7 @@ export default function Articles() {
 
   return (
     <>
-      <Section>
-        <Heading color="purpleCyan" size="xl">
-          Artigos
-        </Heading>
+      <Section title="Artigos">
         {!loading && !errorMessage && (
           <ArticlesList>
             {articles.map((item) => (

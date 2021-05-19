@@ -17,7 +17,6 @@ const ModalCover = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition-duration: 1000ms;
 `;
 const ModalHeader = styled.div`
   display: flex;
@@ -52,6 +51,9 @@ const CloseButton = styled(CloseIcon)`
   text-decoration: none;
   font-size: ${({ theme }) => theme.font.larger};
   color: ${({ theme }) => theme.color.faddedText};
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default function ModalMessage({
@@ -63,12 +65,12 @@ export default function ModalMessage({
         <ModalCover>
           <ModalArea>
             <ModalHeader>
-              <Heading color="pinkPurple" size="md">
+              <Heading color="pinkPurple" size="lg">
                 {technology}
               </Heading>
               <CloseButton onClick={modalCloseHandler} />
             </ModalHeader>
-            <ModalContent>{parse(description)}</ModalContent>
+            <ModalContent lineHeight="lg">{parse(description)}</ModalContent>
           </ModalArea>
         </ModalCover>
       )}
