@@ -23,13 +23,19 @@ const ExternalButton = styled.a`
 const Bar = styled(Box)`
   position: sticky;
   top: 0;
-  backdrop-filter: blur(5px);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border-bottom: solid 1px var(--whiteLight);
   width: 100%;
+  backdrop-filter: blur(5px);
+
+  @-moz-document url-prefix() {
+    & {
+      background-color: rgba(33, 34, 44, 96%);
+    }
+  }
 `;
 
 const BarContent = styled.div`
@@ -77,8 +83,7 @@ export default function NavBar() {
           <Avatar
             src="https://blog.lfrigodesouza.net/uploads/avatar.jpg"
             title="LFrigoDeSouza.NET"
-            color="blackSecondary"
-            borderVariant="large"
+            color="green"
           />
           <BrandName color="cyanGreen">LFrigoDeSouza.NET</BrandName>
         </Brand>
