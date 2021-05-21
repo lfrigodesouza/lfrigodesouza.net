@@ -78,7 +78,7 @@ export default function Technologies() {
       <ModalMessage
         showModal={showModal}
         modalCloseHandler={modalCloseHandler}
-        technology={technology}
+        header={technology}
         description={description}
       />
     </Section>
