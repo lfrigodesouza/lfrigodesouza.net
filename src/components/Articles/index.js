@@ -100,6 +100,7 @@ export default function Articles() {
                 </Text>
                 <Heading>
                   <Anchor
+                    isExternal
                     size="lg"
                     color="yellow"
                     hoverColor="orange"
@@ -113,8 +114,9 @@ export default function Articles() {
                   {' ...'}
                 </Paragraph>
                 <Anchor
+                  isExternal
                   color="green"
-                  hoverColor="purple"
+                  hoverColor="orange"
                   href={`${item.permalink}?utm_medium=site&utm_source=site`}
                 >
                   <ReadMoreContainer>
