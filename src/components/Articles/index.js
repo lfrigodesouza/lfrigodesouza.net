@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { BiErrorCircle } from 'react-icons/bi';
-import { Heading, Paragraph, Text } from '@dracula/dracula-ui';
+import { RiArrowDownSLine } from 'react-icons/ri';
+import {
+  Anchor, Heading, Paragraph, Text,
+} from '@dracula/dracula-ui';
 import Loader from '../Loader';
 import Section from '../Section';
 import Button from '../Button';
@@ -16,19 +19,6 @@ const ArticlesList = styled.ul`
 const ArticleItem = styled.li`
   list-style: none;
   margin-bottom: ${({ theme }) => theme.margin.large};
-`;
-
-const ArticleKeepReading = styled.a`
-  text-decoration: none;
-  color: ${({ theme }) => theme.color.green};
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-
-  & svg {
-    margin: ${({ theme }) => theme.margin.small};
-  }
 `;
 
 const ArticlesButton = styled(Button)`
@@ -47,63 +37,110 @@ const ErrorIcon = styled(BiErrorCircle)`
   font-size: ${({ theme }) => theme.font.jumbo};
 `;
 
+const ReadMoreContainer = styled.div`
+  display: flex;
+  flex-direction: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  & svg {
+    margin: 0px ${({ theme }) => theme.margin.small};
+  }
+`;
+
+const LoadMoreContainer = styled.div`
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+  cursor: pointer;
+  & svg {
+    margin: 0px ${({ theme }) => theme.margin.small};
+  }
+`;
+
 export default function Articles() {
   const CONTENT_URL = 'https://lfrigodesouza-functions.azurewebsites.net/api/blog-latests-posts';
+  const ARTICLE_LIMIT = 5;
   const EXCERPT_LENGTH = 400;
   const [loading, setLoading] = useState(true);
   const [articles, setArticles] = useState([]);
   const [errorMessage, setErrorMessage] = useState();
+  const [currentPage, setCurrentPage] = useState(0);
+  const [hideLoadMore, setHideLoadMore] = useState(false);
 
-  useEffect(async () => {
-    setErrorMessage();
+  async function getArticles() {
     setLoading(true);
-    await fetch(CONTENT_URL)
+    await fetch(`${CONTENT_URL}?page=${currentPage}$limit=${ARTICLE_LIMIT}`)
       .then((response) => response.json())
       .then((data) => {
-        setArticles(data);
+        setArticles([...articles, ...data]);
+        setCurrentPage(currentPage + 1);
+        if (currentPage * ARTICLE_LIMIT > articles.length) setHideLoadMore(true);
         setLoading(false);
       })
       .catch(() => {
         setErrorMessage('Não foi possível carregar os artigos. Por favor, tente novamente.');
         setLoading(false);
       });
+  }
+
+  useEffect(async () => {
+    setErrorMessage();
+    getArticles();
   }, []);
 
   return (
     <>
       <Section title="Artigos">
-        {!loading && !errorMessage && (
+        {!errorMessage && (
           <ArticlesList>
             {articles.map((item) => (
               <ArticleItem key={item.slug}>
                 <Text color="white" size="xs" lineHeight="xs">
                   {new Date(item.date).toLocaleString()}
                 </Text>
-                <Heading color="yellow" size="lg">
-                  {item.title}
+                <Heading>
+                  <Anchor
+                    isExternal
+                    size="lg"
+                    color="yellow"
+                    hoverColor="orange"
+                    href={`${item.permalink}?utm_medium=site&utm_source=site`}
+                  >
+                    {item.title}
+                  </Anchor>
                 </Heading>
                 <Paragraph>
                   {item.text.slice(0, EXCERPT_LENGTH)}
                   {' ...'}
                 </Paragraph>
-                <ArticleKeepReading
+                <Anchor
+                  isExternal
+                  color="green"
+                  hoverColor="orange"
                   href={`${item.permalink}?utm_medium=site&utm_source=site`}
-                  target="_blank"
-                  rel="noreferrer"
                 >
-                  <Text as="span" color="green">
+                  <ReadMoreContainer>
                     Continuar lendo
-                  </Text>
-                  <HiOutlineExternalLink className="drac-text-green" />
-                </ArticleKeepReading>
+                    <HiOutlineExternalLink />
+                  </ReadMoreContainer>
+                </Anchor>
               </ArticleItem>
             ))}
-            <ArticlesButton
-              href="https://blog.lfrigodesouza.net?utm_medium=site&utm_source=site"
-              target="_blank"
-            >
-              Veja mais
-            </ArticlesButton>
+            {!loading && !hideLoadMore && (
+              <Anchor
+                onClick={getArticles}
+                color="yellow"
+                hoverColor="yellowPink"
+                weight="semibold"
+              >
+                <LoadMoreContainer>
+                  <RiArrowDownSLine />
+                  Carregar Mais
+                  <RiArrowDownSLine />
+                </LoadMoreContainer>
+              </Anchor>
+            )}
+            {hideLoadMore && <Text color="blackSecondary">Você chegou ao fim!</Text>}
           </ArticlesList>
         )}
         {loading && <Loader />}
