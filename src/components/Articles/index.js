@@ -48,7 +48,7 @@ const ErrorIcon = styled(BiErrorCircle)`
 `;
 
 export default function Articles() {
-  const CONTENT_URL = 'https://lfrigodesouza-proxy.herokuapp.com/blog/content';
+  const CONTENT_URL = 'https://lfrigodesouza-functions.azurewebsites.net/api/blog-latests-posts';
   const EXCERPT_LENGTH = 400;
   const [loading, setLoading] = useState(true);
   const [articles, setArticles] = useState([]);
@@ -60,7 +60,7 @@ export default function Articles() {
     await fetch(CONTENT_URL)
       .then((response) => response.json())
       .then((data) => {
-        setArticles(data.posts.slice(0, 5));
+        setArticles(data);
         setLoading(false);
       })
       .catch(() => {
