@@ -72,9 +72,13 @@ export default function Articles() {
     await fetch(`${CONTENT_URL}?page=${currentPage}$limit=${ARTICLE_LIMIT}`)
       .then((response) => response.json())
       .then((data) => {
-        setArticles([...articles, ...data]);
-        setCurrentPage(currentPage + 1);
-        if (currentPage * ARTICLE_LIMIT > articles.length) setHideLoadMore(true);
+        const newArticles = [...articles, ...data];
+        setArticles(newArticles);
+        const newCurrentPage = currentPage + 1;
+        setCurrentPage(newCurrentPage);
+        if (newCurrentPage * ARTICLE_LIMIT > newArticles.length) {
+          setHideLoadMore(true);
+        }
         setLoading(false);
       })
       .catch(() => {
