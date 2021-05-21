@@ -33,7 +33,7 @@ const Bar = styled(Box)`
 
   @-moz-document url-prefix() {
     & {
-      background-color: rgba(33, 34, 44, 96%);
+      background-color: rgba(33, 34, 44, 90%);
     }
   }
 `;

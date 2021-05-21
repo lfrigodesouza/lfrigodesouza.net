@@ -17,6 +17,12 @@ const ModalCover = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @-moz-document url-prefix() {
+    & {
+      background-color: rgba(33, 34, 44, 90%);
+    }
+  }
 `;
 const ModalHeader = styled.div`
   display: flex;
@@ -57,7 +63,7 @@ const CloseButton = styled(CloseIcon)`
 `;
 
 export default function ModalMessage({
-  showModal, technology, description, modalCloseHandler,
+  showModal, header, description, modalCloseHandler,
 }) {
   return (
     <>
@@ -66,7 +72,7 @@ export default function ModalMessage({
           <ModalArea>
             <ModalHeader>
               <Heading color="pinkPurple" size="lg">
-                {technology}
+                {header}
               </Heading>
               <CloseButton onClick={modalCloseHandler} />
             </ModalHeader>
@@ -80,7 +86,7 @@ export default function ModalMessage({
 
 ModalMessage.propTypes = {
   showModal: bool.isRequired,
-  technology: string.isRequired,
+  header: string.isRequired,
   description: string.isRequired,
   modalCloseHandler: func.isRequired,
 };
