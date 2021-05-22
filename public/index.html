@@ -42,6 +42,23 @@
       content="https://lfrigodesouzaimages.blob.core.windows.net/images/site_preview.png"
     />
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-X5EVXLS0NY"
+    ></script>
+    <script>
+      if (!window.location.hostname.includes("localhost")) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-X5EVXLS0NY");
+      }
+    </script>
+
     <title>LFrigoDeSouza.NET</title>
   </head>
   <body class="drac-bg-black">
