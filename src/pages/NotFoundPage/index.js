@@ -58,7 +58,7 @@ export default function NotFoundPage() {
     const isArticleUrl = /\/\d{4}\/\d{2}\/\d{2}\/.*/gi.test(location.pathname);
     if (isArticleUrl) {
       setArticleUrl(true);
-      window.location.href = `https://blog.lfrigodesouza.net${location.pathname}/${location.search}`;
+      window.location.href = `https://blog.lfrigodesouza.net${location.pathname}/${location.search}?utm_medium=site&utm_source=site`;
     }
     setLoading(false);
   }, []);
@@ -82,7 +82,7 @@ export default function NotFoundPage() {
                   para este endereço:
                 </Text>
                 <Button
-                  href={`https://blog.lfrigodesouza.net${location.pathname}/${location.search}`}
+                  href={`https://blog.lfrigodesouza.net${location.pathname}/${location.search}?utm_medium=site&utm_source=site`}
                   target="_blank"
                   rel="noreferrer"
                 >
