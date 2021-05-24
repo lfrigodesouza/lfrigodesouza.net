@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import styled from 'styled-components';
 import { AiOutlineClose as CloseIcon } from 'react-icons/ai';
 import { bool, func, string } from 'prop-types';
-import { Heading, Text } from '@dracula/dracula-ui';
+import { Box, Heading, Text } from '@dracula/dracula-ui';
 
 const ModalCover = styled.div`
   position: fixed;
@@ -44,7 +44,11 @@ const ModalArea = styled.aside`
   margin: ${({ theme }) => theme.margin.larger};
 `;
 
-const ModalContent = styled(Text)`
+const ModalContent = styled(Box)`
+  max-height: 80vh;
+`;
+
+const Content = styled(Text)`
   padding: ${({ theme }) => theme.padding.medium};
   text-align: justify;
   display: flex;
@@ -76,7 +80,9 @@ export default function ModalMessage({
               </Heading>
               <CloseButton onClick={modalCloseHandler} />
             </ModalHeader>
-            <ModalContent lineHeight="lg">{parse(description)}</ModalContent>
+            <ModalContent scrollbar>
+              <Content lineHeight="lg">{parse(description)}</Content>
+            </ModalContent>
           </ModalArea>
         </ModalCover>
       )}
