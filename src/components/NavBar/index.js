@@ -81,7 +81,7 @@ export default function NavBar() {
       <BarContent>
         <Brand as={Link} to="/">
           <Avatar
-            src="https://blog.lfrigodesouza.net/uploads/avatar.jpg"
+            src="https://lfrigodesouzaimages.blob.core.windows.net/images/foto_perfil.jpg"
             title="LFrigoDeSouza.NET"
             color="green"
           />
