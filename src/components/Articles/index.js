@@ -38,7 +38,7 @@ const ErrorIcon = styled(BiErrorCircle)`
 `;
 
 const ReadMoreContainer = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: center;
   justify-content: flex-start;
   cursor: pointer;
