@@ -13,14 +13,14 @@ export default function About() {
   return (
     <Section showDivider={false}>
       <Title size="2xl" color="green">
-        Olá, seja bem-vindo(a)!
+        Olá, seja bem-vindo\a!
       </Title>
       <Paragraph align="justify" lineHeight="lg">
         Me chamo Lucas, sou formado em Engenharia da Computação, tenho MBA em Engenharia de Software
         e estou cursando um MBA em CyberSecurity.
         <br />
         Com mais de 10 anos de experiência em TI, já trabalhei como analista de suporte e teste/QA,
-        e atualmente atuo como desenvolvedor sênior.
+        e atualmente atuo como Líder Técnico de um time de 7 engenheiros\as.
         <br />
         <br />
         Meu forte é programação backend com .NET e C#, porém já trabalhei com diversas tecnologias,
