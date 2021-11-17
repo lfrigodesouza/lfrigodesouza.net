@@ -27,19 +27,20 @@ export const TechnologiesData = [
   new Technology(
     <DiDotnet />,
     '.NET',
-    `Tenho 5 anos de experiência com desenvolvimento backend com .NET e C#. 
-    <br>Atualmente trabalho com a construção e manutenção de WebApis com .NET Core. Trabalho diariamente com projetos com MediatR, RabbitMQ e CQRS.`,
+    `Tenho alguns anos de experiência com desenvolvimento backend com .NET e C#, principalmente com desenvolvimento de aplicações web.
+    <br>Atualmente trabalho como Líder Técnico de um time cuja tecnologia principal é .NET, 
+    com a construção e manutenção de WebApis com .NET Core, com projetos com MediatR, RabbitMQ e CQRS.`,
   ),
   new Technology(
     <BsShieldLock />,
     'DevSec',
-    `Gosto bastante da área de segurança da informação, especialmente se tratando de Desenvolvimento Seguro. 
+    `Sou entusiasta da área de segurança da informação, e hoje procuro me especializar na área do Desenvolvimento Seguro.
     <br>Atualmente estou cursando um MBA em CyberSecurity na FIAP, uma das mais reconhecidas faculdades de tecnologia de São Paulo.`,
   ),
   new Technology(
     <SiGit />,
     'Git',
-    `Trabalho diariamente com Git, mantendo os mais diversos repositórios e trabalhando em colaboração com outras pessoas no time e com outros times.
+    `Trabalho diariamente com Git, mantendo os mais diversos repositórios e trabalhando em colaboração com outras pessoas e com outros times.
     <br>Vivência com GitFlow e a cultura de PRs e Code Review.`,
   ),
   new Technology(
@@ -61,17 +62,18 @@ export const TechnologiesData = [
   new Technology(
     <SiMicrosoftazure />,
     'Azure',
-    'Sou certificado no exame AZ-900 (Microsoft Azure Fundamentals), e não mesmo trabalhando diariamente com o Azure, tenho os conhecimentos para o deploy de WebApps, criação e manutenção de recursos, criação de bancos de dados, etc.',
+    `Sou certificado no exame AZ-900 (Microsoft Azure Fundamentals), e mesmo não trabalhando diariamente com o Azure, tenho os conhecimentos para o deploy de WebApps, criação 
+    e manutenção de recursos, criação de bancos de dados, uso do AzureDevOps, etc.`,
   ),
   new Technology(
     <SiAmazonaws />,
     'AWS',
-    'Trabalho diariamente com recusos da AWS, como o AKS, Buckets S3, containers no Beanstalk, etc.',
+    'Trabalho diariamente com recursos da AWS, como o AKS, Buckets S3, containers no Beanstalk, etc. Tenho conhecimento básico no gerenciamento e diagnósticos desses recursos.',
   ),
   new Technology(
     <DiScrum />,
     'Agilidade',
-    'Tenho um MBA em Engenharia de Software e trabalho diariamente com projetos ágeis, tanto com scrum quanto com Kanban.',
+    'Tenho um MBA em Engenharia de Software e trabalho diariamente com projetos ágeis, tanto com Scrum quanto com Kanban, facilitando cerimônias e monitorando métricas do time.',
   ),
   new Technology(
     <SiMicrosoftsqlserver />,
@@ -92,7 +94,7 @@ export const TechnologiesData = [
   new Technology(
     <SiFirebase />,
     'Firebase',
-    'Tenho conhecimentos com a integração do Firebase com sistemas Web, tanto para uso de armazenamento, criação de functions, autenticação etc.',
+    'Tenho conhecimentos com a integração do Firebase com sistemas Web, tanto para uso de armazenamento, criação de functions, autenticação, Remote Config, etc.',
   ),
   new Technology(
     <DiVim />,
