@@ -100,7 +100,7 @@ export default function Articles() {
             {articles.map((item) => (
               <ArticleItem key={item.slug}>
                 <Text color="white" size="xs" lineHeight="xs">
-                  {new Date(item.date).toLocaleString()}
+                  {new Date(item.date).toLocaleString('pt-BR')}
                 </Text>
                 <Heading>
                   <Anchor

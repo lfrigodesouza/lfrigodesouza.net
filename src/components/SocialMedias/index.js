@@ -48,7 +48,7 @@ export default function SocialMedias() {
   return (
     <>
       <Title size="sm" color="yellowPink">
-        Entre em contato pelas redes sociais!
+        Não deixe de conferir os artigos que escrevi no meu blog e me acompanhe nas redes sociais
       </Title>
       <SocialMediasButtons>
         {socialMediaList.map((item) => (
