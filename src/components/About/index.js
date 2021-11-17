@@ -20,7 +20,8 @@ export default function About() {
         e estou cursando um MBA em CyberSecurity.
         <br />
         Com mais de 10 anos de experiência em TI, já trabalhei como analista de suporte, analista de
-        teste/QA, desenvolvedor, e atualmente atuo comoLíder Técnico de um time de 7 engenheiros\as.
+        teste/QA, desenvolvedor, e atualmente atuo como Líder Técnico de um time de 7
+        engenheiros\as.
         <br />
         <br />
         Meu forte é programação backend com .NET e C#, porém já trabalhei com diversas tecnologias,
