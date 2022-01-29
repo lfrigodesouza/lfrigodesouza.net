@@ -40,14 +40,19 @@ export default function Footer({ fixed }) {
   function beerClickHandler() {
     setShowModal(true);
   }
+
+  function getCurrentYear() {
+    return new Date().getFullYear();
+  }
+
   return (
     <FooterBar fixed={fixed}>
-      <Text as="p" color="purpleCyan" size="sm">
-        LFrigoDeSouza.NET | © 2020 – 2021
-        {' '}
+      <Text as="p" color="purple" size="sm">
+        LFrigoDeSouza.NET | 2018 –
+        {` ${getCurrentYear()} `}
         <BeerButton onClick={beerClickHandler}>
           Buy me a beer
-          <Text as={TiBeer} color="cyan" />
+          <Text as={TiBeer} color="purple" />
         </BeerButton>
       </Text>
 
