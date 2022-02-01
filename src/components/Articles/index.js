@@ -134,7 +134,7 @@ export default function Articles() {
               <Anchor
                 onClick={getArticles}
                 color="yellow"
-                hoverColor="yellowPink"
+                hoverColor="pink"
                 weight="semibold"
               >
                 <LoadMoreContainer>
