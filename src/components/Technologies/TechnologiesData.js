@@ -12,6 +12,7 @@ import {
   SiDocker,
   SiAmazonaws,
   SiMicrosoftsqlserver,
+  SiOpensourceinitiative,
 } from 'react-icons/si';
 import { BsShieldLock } from 'react-icons/bs';
 
@@ -97,8 +98,13 @@ export const TechnologiesData = [
     'Tenho conhecimentos com a integração do Firebase com sistemas Web, tanto para uso de armazenamento, criação de functions, autenticação, Remote Config, etc.',
   ),
   new Technology(
+    <SiOpensourceinitiative />,
+    'Software Livre',
+    'Busco sempre usar e incentivar o uso de software livre e de código aberto. Também procuro participar e contribuir com esses projetos sempre que possível. <br>Quanto mais pessoas contribuirem para projetos FOSS (Free and Open Source Software), maiores são as chances desses projetos crescerem e ficarem cada vez melhores.',
+  ),
+  new Technology(
     <DiVim />,
     'Vim',
-    'Não basta só usar o Vim, tem de falar pra todo mundo que usa! Se você nunca experimentou, vale a pena dar uma olhada. Apesar de ter uma curva de aprendizado e parecer assustador no começo, vale muito a pena pelo ganho de produtividade. <p class="drac-text-green">❤ Vi</p>',
+    'Não basta só usar o Vim, tem de falar pra todo mundo que usa! Se você nunca exp/home/lfrigodesouza/Repos/lfrigodesouza.neterimentou, vale a pena dar uma olhada. Apesar de ter uma curva de aprendizado e parecer assustador no começo, vale muito a pena pelo ganho de produtividade. <p class="drac-text-green">❤ Vim</p>',
   ),
 ];
