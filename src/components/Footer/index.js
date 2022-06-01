@@ -27,7 +27,7 @@ const BeerButton = styled.span`
 
 const BUY_ME_A_BEER_DESCRIPTION = `Gostou dos meus conteúdos? Porque não aproveita e me compra uma cerveja? Utilize o QRCode abaixo (ou o código da chave) para fazer um Pix de qualquer valor! <br> Vai me ajudar tanto com cerveja, quanto com as despesas dos conteúdos que eu produzo!
 
-<span class="drac-text-black-secondary drac-mb-sm drac-mt-sm drac-text-center">5c80c88b-d1e7-4799-a185-dd8517d1671e</span>
+<span class="drac-text-black-secondary drac-mb-sm drac-mt-sm drac-text-center">pix@lfrigodesouza.net</span>
 <img width="70%" src="/qrcode-pix.png"/>`;
 
 export default function Footer({ fixed }) {
