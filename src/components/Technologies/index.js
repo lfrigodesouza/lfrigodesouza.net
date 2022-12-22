@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Text } from '@dracula/dracula-ui';
+import { Text } from 'dracula-ui';
 import { TechnologiesData as technologiesList } from './TechnologiesData';
 import Section from '../Section';
 import ModalMessage from '../ModalMessage';

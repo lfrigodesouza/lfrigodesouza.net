@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Text } from '@dracula/dracula-ui';
+import { Text } from 'dracula-ui';
 import { bool } from 'prop-types';
 import { TiBeer } from 'react-icons/ti';
 import ModalMessage from '../ModalMessage';

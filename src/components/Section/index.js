@@ -1,7 +1,7 @@
 import React from 'react';
 import { bool, node, string } from 'prop-types';
 import styled from 'styled-components';
-import { Heading } from '@dracula/dracula-ui';
+import { Heading } from 'dracula-ui';
 import Divider from '../Divider';
 
 const SectionWrapper = styled.section`

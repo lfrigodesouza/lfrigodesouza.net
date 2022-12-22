@@ -1,6 +1,8 @@
-import { Heading } from '@dracula/dracula-ui';
+import { Heading } from 'dracula-ui';
 import React from 'react';
-import { FaEnvelope, FaGithub, FaTwitter } from 'react-icons/fa';
+import {
+  FaEnvelope, FaGithub, FaTwitter, FaMastodon,
+} from 'react-icons/fa';
 import styled from 'styled-components';
 
 class SocialMediaLink {
@@ -11,12 +13,13 @@ class SocialMediaLink {
   }
 }
 const socialMediaList = [
+  new SocialMediaLink(<FaMastodon />, 'https://fosstodon.org/@lfrigodesouza', 'mastodon'),
   new SocialMediaLink(<FaTwitter />, 'https://twitter.com/lfrigodesouza', 'twitter'),
   new SocialMediaLink(<FaGithub />, 'https://github.com/lfrigodesouza', 'github'),
   new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
 ];
 const SocialMediasButtons = styled.div`
-  width: 150px;
+  width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -31,7 +34,7 @@ const SocialMediaButton = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: space-between;
+  align-content: space-between;
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     margin-top: ${({ theme }) => theme.margin.small};
   }

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { AiFillWarning } from 'react-icons/ai';
 import { useLocation } from 'react-router-dom';
-import { Heading, Text } from '@dracula/dracula-ui';
+import { Heading, Text } from 'dracula-ui';
 import NavBar from '../../components/NavBar';
 import Button from '../../components/Button';
 import Divider from '../../components/Divider';

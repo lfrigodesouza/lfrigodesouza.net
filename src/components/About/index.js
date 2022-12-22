@@ -1,4 +1,4 @@
-import { Heading, Paragraph } from '@dracula/dracula-ui';
+import { Heading, Paragraph } from 'dracula-ui';
 import React from 'react';
 import styled from 'styled-components';
 import Section from '../Section';

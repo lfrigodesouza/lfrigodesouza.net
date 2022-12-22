@@ -5,7 +5,7 @@ import { BiErrorCircle } from 'react-icons/bi';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import {
   Anchor, Heading, Paragraph, Text,
-} from '@dracula/dracula-ui';
+} from 'dracula-ui';
 import Loader from '../Loader';
 import Section from '../Section';
 import Button from '../Button';

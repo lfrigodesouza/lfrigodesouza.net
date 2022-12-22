@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import {
   Avatar, Box, Heading, Text,
-} from '@dracula/dracula-ui';
+} from 'dracula-ui';
 import { Link } from 'react-router-dom';
 
 const ExternalButton = styled.a`

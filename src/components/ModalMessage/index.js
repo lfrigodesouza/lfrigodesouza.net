@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 import styled from 'styled-components';
 import { AiOutlineClose as CloseIcon } from 'react-icons/ai';
 import { bool, func, string } from 'prop-types';
-import { Box, Heading, Text } from '@dracula/dracula-ui';
+import { Box, Heading, Text } from 'dracula-ui';
 
 const ModalCover = styled.div`
   position: fixed;

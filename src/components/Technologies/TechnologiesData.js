@@ -13,6 +13,9 @@ import {
   SiAmazonaws,
   SiMicrosoftsqlserver,
   SiOpensourceinitiative,
+  SiAngular,
+  SiPostgresql,
+  SiMongodb,
 } from 'react-icons/si';
 import { BsShieldLock } from 'react-icons/bs';
 
@@ -43,6 +46,12 @@ export const TechnologiesData = [
     'Git',
     `Trabalho diariamente com Git, mantendo os mais diversos repositórios e trabalhando em colaboração com outras pessoas e com outros times.
     <br>Vivência com GitFlow e a cultura de PRs e Code Review.`,
+  ),
+  new Technology(
+    <SiAngular />,
+    'Angular',
+    `Trabalho diariamente com Angular, utilizando as versões mais recentes da biblioteca, 
+    <br> utilizando o TypeScript como linguem, componentes PrimeNG e Material e gerenciamento de estado com NGXS`,
   ),
   new Technology(
     <SiReact />,
@@ -84,8 +93,18 @@ export const TechnologiesData = [
   new Technology(
     <SiOracle />,
     'Oracle',
-    `Hoje trabalho principalmente com bancos de dados Oracle. 
-    <br>Tenho conhecimento na instalação de instâncias, gerenciamento de schemas, execução e otimização de queries, etc.`,
+    'Tenho conhecimento na instalação de instâncias Oracle, gerenciamento de schemas, execução e otimização de queries, etc.',
+  ),
+  new Technology(
+    <SiPostgresql />,
+    'PostgreSQL',
+    `Hoje trabalho principalmente com bancos de dados PostgreSQL. 
+    <br>Tenho conhecimento no gerenciamento de schemas, execução e otimização de queries, etc.`,
+  ),
+  new Technology(
+    <SiMongodb />,
+    'MongoDB',
+    'Conhecimentos na utilização do MongoDB para armazenamento de grandes volumes de dados não normalizados, e também na criação de pipelines de consulta.',
   ),
   new Technology(
     <DiRedis />,
@@ -105,6 +124,6 @@ export const TechnologiesData = [
   new Technology(
     <DiVim />,
     'Vim',
-    'Não basta só usar o Vim, tem de falar pra todo mundo que usa! Se você nunca exp/home/lfrigodesouza/Repos/lfrigodesouza.neterimentou, vale a pena dar uma olhada. Apesar de ter uma curva de aprendizado e parecer assustador no começo, vale muito a pena pelo ganho de produtividade. <p class="drac-text-green">❤ Vim</p>',
+    'Não basta só usar o Vim, tem de falar pra todo mundo que usa! Se você nunca experimentou, vale a pena dar uma olhada. Apesar de ter uma curva de aprendizado e parecer assustador no começo, vale muito a pena pelo ganho de produtividade. <p class="drac-text-green">❤ Vim</p>',
   ),
 ];
