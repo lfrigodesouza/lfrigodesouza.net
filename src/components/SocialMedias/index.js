@@ -6,14 +6,15 @@ import {
 import styled from 'styled-components';
 
 class SocialMediaLink {
-  constructor(icon, url, name) {
+  constructor(icon, url, name, rel = 'noreferrer') {
     this.icon = icon;
     this.name = name;
     this.url = url;
+    this.rel = rel;
   }
 }
 const socialMediaList = [
-  new SocialMediaLink(<FaMastodon />, 'https://fosstodon.org/@lfrigodesouza', 'mastodon'),
+  new SocialMediaLink(<FaMastodon />, 'https://fosstodon.org/@lfrigodesouza', 'mastodon', 'me'),
   new SocialMediaLink(<FaTwitter />, 'https://twitter.com/lfrigodesouza', 'twitter'),
   new SocialMediaLink(<FaGithub />, 'https://github.com/lfrigodesouza', 'github'),
   new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
@@ -55,7 +56,7 @@ export default function SocialMedias() {
       </Title>
       <SocialMediasButtons>
         {socialMediaList.map((item) => (
-          <SocialMediaButton href={item.url} target="_blank" rel="noreferrer" key={item.name}>
+          <SocialMediaButton href={item.url} target="_blank" rel={item.rel} key={item.name}>
             {item.icon}
           </SocialMediaButton>
         ))}
