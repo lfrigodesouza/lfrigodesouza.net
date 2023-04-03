@@ -1,4 +1,4 @@
 Contact: mailto:security@lfrigodesouza.net
-Expires: 2022-12-31T15:59:00.000Z
+Expires: 2023-12-31T15:59:00.000Z
 Encryption: https://lfrigodesouza.net/publickey.txt
 Preferred-Languages: pt_br, en
