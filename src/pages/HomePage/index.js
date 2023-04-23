@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 import About from '../../components/About';
 import Articles from '../../components/Articles';
 import Footer from '../../components/Footer';
@@ -21,6 +22,9 @@ const PageContent = styled.div`
 `;
 
 export default function HomePage() {
+  const location = useLocation();
+  const queryParameters = new URLSearchParams(location.search);
+  const buyMeABeer = !!queryParameters.get('buymeabeer');
   return (
     <Page>
       <NavBar />
@@ -29,7 +33,7 @@ export default function HomePage() {
         <Technologies />
         <Articles />
       </PageContent>
-      <Footer />
+      <Footer buyMeABeer={buyMeABeer} />
     </Page>
   );
 }

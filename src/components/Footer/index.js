@@ -30,8 +30,8 @@ const BUY_ME_A_BEER_DESCRIPTION = `Gostou dos meus conteúdos? Porque não aprov
 <span class="drac-text-black-secondary drac-mb-sm drac-mt-sm drac-text-center">pix@lfrigodesouza.net</span>
 <img width="70%" src="/qrcode-pix.png"/>`;
 
-export default function Footer({ fixed }) {
-  const [showModal, setShowModal] = useState(false);
+export default function Footer({ fixed, buyMeABeer }) {
+  const [showModal, setShowModal] = useState(buyMeABeer);
   function modalCloseHandler(evt) {
     evt.preventDefault();
     setShowModal(false);
@@ -68,8 +68,10 @@ export default function Footer({ fixed }) {
 
 Footer.defaultProps = {
   fixed: false,
+  buyMeABeer: false,
 };
 
 Footer.propTypes = {
   fixed: bool,
+  buyMeABeer: bool,
 };
