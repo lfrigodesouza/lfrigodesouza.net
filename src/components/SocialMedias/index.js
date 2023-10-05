@@ -15,7 +15,6 @@ class SocialMediaLink {
 }
 const socialMediaList = [
   new SocialMediaLink(<FaMastodon />, 'https://techhub.social/@lfrigodesouza', 'mastodon', 'me'),
-  new SocialMediaLink(<FaTwitter />, 'https://twitter.com/lfrigodesouza', 'twitter'),
   new SocialMediaLink(<FaGithub />, 'https://github.com/lfrigodesouza', 'github'),
   new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
 ];
