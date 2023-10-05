@@ -1,7 +1,7 @@
 import { Heading } from 'dracula-ui';
 import React from 'react';
 import {
-  FaEnvelope, FaGithub, FaTwitter, FaMastodon,
+  FaEnvelope, FaGithub, FaMastodon,
 } from 'react-icons/fa';
 import styled from 'styled-components';
 
