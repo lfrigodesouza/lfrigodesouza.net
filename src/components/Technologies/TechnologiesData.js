@@ -16,6 +16,8 @@ import {
   SiAngular,
   SiPostgresql,
   SiMongodb,
+  SiPython,
+  SiKubuntu,
 } from 'react-icons/si';
 import { BsShieldLock } from 'react-icons/bs';
 
@@ -33,31 +35,37 @@ export const TechnologiesData = [
     '.NET',
     `Tenho alguns anos de experiência com desenvolvimento backend com .NET e C#, principalmente com desenvolvimento de aplicações web.
     <br>Atualmente trabalho como Líder Técnico de um time cuja tecnologia principal é .NET, 
-    com a construção e manutenção de WebApis com .NET Core, com projetos com MediatR, RabbitMQ e CQRS.`,
+    com a construção e manutenção de WebApis com .NET Core. Tenho experiência com projetos com MediatR, RabbitMQ e CQRS.`,
   ),
   new Technology(
     <BsShieldLock />,
     'DevSec',
     `Sou entusiasta da área de segurança da informação, e hoje procuro me especializar na área do Desenvolvimento Seguro.
-    <br>Atualmente estou cursando um MBA em CyberSecurity na FIAP, uma das mais reconhecidas faculdades de tecnologia de São Paulo.`,
+    <br>Sou formado em um MBA em CyberSecurity e Ethical Hacking na FIAP, uma das mais reconhecidas faculdades de tecnologia de São Paulo.`,
   ),
   new Technology(
     <SiGit />,
     'Git',
     `Trabalho diariamente com Git, mantendo os mais diversos repositórios e trabalhando em colaboração com outras pessoas e com outros times.
-    <br>Vivência com GitFlow e a cultura de PRs e Code Review.`,
+    <br>Vivência com a cultura de PRs e Revisão de código.`,
   ),
   new Technology(
     <SiAngular />,
     'Angular',
-    `Trabalho diariamente com Angular, utilizando as versões mais recentes da biblioteca, 
+    `Já trabalhei com Angular, utilizando as versões mais recentes da biblioteca,
     <br> utilizando o TypeScript como linguem, componentes PrimeNG e Material e gerenciamento de estado com NGXS`,
   ),
   new Technology(
     <SiReact />,
     'React',
-    `Também tenho conhecimentos em ReactJS, mesmo hoje meu foco sendo no desenvolvimento backend. 
+    `Também tenho conhecimentos em ReactJS, mesmo hoje meu foco sendo no desenvolvimento backend.
     <br>Este site mesmo foi todo construindo utilizando React, com hooks e styled-components.`,
+  ),
+  new Technology(
+    <SiPython />,
+    'Python',
+    `Experiência com desenvolvimento em Python para manipulação e processamento de grande quantidade de arquivos e criação de scripts utilitários,
+    assim como com a utilização do Django para desenvolvimento web.`,
   ),
   new Technology(
     <SiDocker />,
@@ -67,18 +75,18 @@ export const TechnologiesData = [
   new Technology(
     <SiKubernetes />,
     'Kubernetes',
-    'Contato diário com aplicações rodando no Kubernetes, especificamente no EKS com o Helm. Tenho experiência também na configuração das aplicações para ambiente Kubernetes, assim como a manutenção e diagnósticos dos pods.',
+    'Contato diário com aplicações rodando no Kubernetes, com gerenciamento de versões com o Helm. Tenho experiência também na configuração das aplicações para ambiente Kubernetes, assim como a manutenção e diagnósticos dos pods.',
   ),
   new Technology(
     <SiMicrosoftazure />,
     'Azure',
-    `Sou certificado no exame AZ-900 (Microsoft Azure Fundamentals), e mesmo não trabalhando diariamente com o Azure, tenho os conhecimentos para o deploy de WebApps, criação 
+    `Sou certificado no exame AZ-900 (Microsoft Azure Fundamentals), e tenho os conhecimentos para o deploy de WebApps, criação
     e manutenção de recursos, criação de bancos de dados, uso do AzureDevOps, etc.`,
   ),
   new Technology(
     <SiAmazonaws />,
     'AWS',
-    'Trabalho diariamente com recursos da AWS, como o AKS, Buckets S3, containers no Beanstalk, etc. Tenho conhecimento básico no gerenciamento e diagnósticos desses recursos.',
+    'Tenho experiência com recursos da AWS, como o AKS, Buckets S3, containers no Beanstalk, etc. Tenho conhecimento básico no gerenciamento e diagnósticos desses recursos.',
   ),
   new Technology(
     <DiScrum />,
@@ -88,7 +96,7 @@ export const TechnologiesData = [
   new Technology(
     <SiMicrosoftsqlserver />,
     'MSSQLServer',
-    'Tenho 9 anos de experiência trabalhando com MSSQLServer, tanto com execução e construção de queries, quanto otimização de rotinas, importação e exportação de bancos, instalação de servidores, manutenções, etc.',
+    'Tenho longa experiência trabalhando com MSSQLServer, tanto com execução e construção de queries, quanto otimização de rotinas, importação e exportação de bancos, instalação de servidores, manutenções, etc.',
   ),
   new Technology(
     <SiOracle />,
@@ -98,8 +106,7 @@ export const TechnologiesData = [
   new Technology(
     <SiPostgresql />,
     'PostgreSQL',
-    `Hoje trabalho principalmente com bancos de dados PostgreSQL. 
-    <br>Tenho conhecimento no gerenciamento de schemas, execução e otimização de queries, etc.`,
+    'Já trabalhei com bancos de dados PostgreSQL, e tenho conhecimento no gerenciamento de schemas, execução e otimização de queries, etc.',
   ),
   new Technology(
     <SiMongodb />,
@@ -119,7 +126,14 @@ export const TechnologiesData = [
   new Technology(
     <SiOpensourceinitiative />,
     'Software Livre',
-    'Busco sempre usar e incentivar o uso de software livre e de código aberto. Também procuro participar e contribuir com esses projetos sempre que possível. <br>Quanto mais pessoas contribuirem para projetos FOSS (Free and Open Source Software), maiores são as chances desses projetos crescerem e ficarem cada vez melhores.',
+    `Busco sempre usar e incentivar o uso de software livre e de código aberto. Também procuro participar e contribuir com esses projetos sempre que possível.
+    <br>Quanto mais pessoas contribuirem para projetos FOSS (Free and Open Source Software), maiores são as chances desses projetos crescerem e ficarem cada vez melhores.`,
+  ),
+  new Technology(
+    <SiKubuntu />,
+    'Linux',
+    `Como entusiasta de software livre, nada mais justo do que utilizar um SO que siga essa filosofia, como o Linux, sempre proprizando aplicações que suporte a plataforma.
+    <br />Depois de testar mais distribuições do que eu gostaria de adminitir, atualmente utilizo o Kubuntu como sistema principal`,
   ),
   new Technology(
     <DiVim />,

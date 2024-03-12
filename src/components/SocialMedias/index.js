@@ -1,7 +1,7 @@
 import { Heading } from 'dracula-ui';
 import React from 'react';
 import {
-  FaEnvelope, FaGithub, FaMastodon,
+  FaEnvelope, FaGithub, FaMastodon, FaTwitter,
 } from 'react-icons/fa';
 import styled from 'styled-components';
 
@@ -17,6 +17,7 @@ const socialMediaList = [
   new SocialMediaLink(<FaMastodon />, 'https://techhub.social/@lfrigodesouza', 'mastodon', 'me'),
   new SocialMediaLink(<FaGithub />, 'https://github.com/lfrigodesouza', 'github'),
   new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
+  new SocialMediaLink(<FaTwitter />, 'https://twitter.com/lfrigodesouza', 'twitter'),
 ];
 const SocialMediasButtons = styled.div`
   width: 200px;
@@ -53,6 +54,7 @@ export default function SocialMedias() {
       <Title size="sm" color="yellowPink">
         Não deixe de conferir os artigos que escrevi no meu blog e me acompanhe nas redes sociais
       </Title>
+      <br />
       <SocialMediasButtons>
         {socialMediaList.map((item) => (
           <SocialMediaButton href={item.url} target="_blank" rel={item.rel} key={item.name}>

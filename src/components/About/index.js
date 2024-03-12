@@ -19,8 +19,12 @@ export default function About() {
         Me chamo Lucas, sou formado em Engenharia da Computação com MBAs em Engenharia de Software e
         Cibersegurança.
         <br />
-        Com mais de 10 anos de experiência em TI, já trabalhei como analista de suporte,
-        analista de teste/QA, desenvolvedor e atualmente atuo como líder técnico.
+        <br />
+        Com mais de 14 anos de experiência em TI, já trabalhei como analista de suporte,
+        analista de teste/QA, desenvolvedor e atualmente atuo como líder técnico na
+        {' '}
+        <a href="https://www.iteris.com.br/" target="_blank" rel="noreferrer">Iteris Consultoria</a>
+        .
         <br />
         <br />
         Meu forte é programação backend com .NET e C#, porém já trabalhei com diversas
@@ -29,9 +33,10 @@ export default function About() {
         <br />
         Também tenho um foco em segurança da informação e desenvolvimento seguro (DevSec).
         <br />
-        Trabalhei por alguns anos na área da Indústria 4.0, e já atuei no mercado de
-        adquirência e no mercado financeiro (na área de investimentos de uma grande fintech
-        brasileira). Atualmente estou atuando no mercado imobiliário para uma empresa dos EUA.
+        <br />
+        Trabalhei por alguns anos na área da Indústria 4.0, já atuei no mercado de investimentos e
+        no setor imobiliário e atualmente estou atuando no mercado de adquirência
+        para uma empresa dos EUA.
         <br />
       </Paragraph>
       <SocialMedias />
