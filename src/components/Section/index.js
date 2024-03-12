@@ -21,6 +21,7 @@ export default function Section({ children, showDivider, title }) {
           {title}
         </Heading>
       )}
+      <br />
       {children}
     </SectionWrapper>
   );
