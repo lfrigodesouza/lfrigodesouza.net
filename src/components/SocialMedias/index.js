@@ -1,9 +1,10 @@
 import { Heading } from 'dracula-ui';
 import React from 'react';
 import {
-  FaEnvelope, FaGithub, FaMastodon, FaTwitter,
+  FaEnvelope, FaGithub, FaMastodon,
 } from 'react-icons/fa';
 import styled from 'styled-components';
+import { FaBluesky, FaThreads } from 'react-icons/fa6';
 
 class SocialMediaLink {
   constructor(icon, url, name, rel = 'noreferrer') {
@@ -14,10 +15,11 @@ class SocialMediaLink {
   }
 }
 const socialMediaList = [
+  new SocialMediaLink(<FaBluesky />, 'https://bsky.app/profile/lfrigodesouza.net', 'bluesky'),
   new SocialMediaLink(<FaMastodon />, 'https://techhub.social/@lfrigodesouza', 'mastodon', 'me'),
+  new SocialMediaLink(<FaThreads />, 'https://www.threads.net/@lfrigodesouza', 'threads'),
   new SocialMediaLink(<FaGithub />, 'https://github.com/lfrigodesouza', 'github'),
   new SocialMediaLink(<FaEnvelope />, 'mailto:contato@lfrigodesouza.net', 'email'),
-  new SocialMediaLink(<FaTwitter />, 'https://twitter.com/lfrigodesouza', 'twitter'),
 ];
 const SocialMediasButtons = styled.div`
   width: 200px;
@@ -36,6 +38,7 @@ const SocialMediaButton = styled.a`
   flex-direction: column;
   justify-content: center;
   align-content: space-between;
+  margin-left: 5px;
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     margin-top: ${({ theme }) => theme.margin.small};
   }
