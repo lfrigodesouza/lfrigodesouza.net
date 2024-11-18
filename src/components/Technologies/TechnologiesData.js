@@ -10,7 +10,6 @@ import {
   SiGit,
   SiReact,
   SiDocker,
-  SiAmazonaws,
   SiMicrosoftsqlserver,
   SiOpensourceinitiative,
   SiAngular,
@@ -20,6 +19,7 @@ import {
   SiKubuntu,
 } from 'react-icons/si';
 import { BsShieldLock } from 'react-icons/bs';
+import { FaAws } from 'react-icons/fa6';
 
 export class Technology {
   constructor(icon, name, description) {
@@ -84,7 +84,7 @@ export const TechnologiesData = [
     e manutenção de recursos, criação de bancos de dados, uso do AzureDevOps, etc.`,
   ),
   new Technology(
-    <SiAmazonaws />,
+    <FaAws />,
     'AWS',
     'Tenho experiência com recursos da AWS, como o AKS, Buckets S3, containers no Beanstalk, etc. Tenho conhecimento básico no gerenciamento e diagnósticos desses recursos.',
   ),
